@@ -31,19 +31,6 @@ body {
     color: #888;
 }
 
-.partido {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
-.resultado {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 8px;
-    color: #2c3e50;
-}
-
 .extra {
     font-size: 12px;
     color: #666;
@@ -56,21 +43,27 @@ body {
     margin-top: 8px;
 }
 
+select {
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
 @media (max-width: 600px) {
     .card { padding: 10px; }
-    .partido { font-size: 14px; }
     .liga { font-size: 11px; }
     .extra, .fecha { font-size: 10px; }
     img { width: 24px !important; }
 }
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 <h1>🏉 Resultados Rugby Colombia</h1>
-<div style="margin-bottom:20px;">
+
+<div style="margin-bottom:20px; display:flex; flex-wrap:wrap; gap:10px;">
 
 <select id="filtroLiga">
     <option value="">Todas las ligas</option>
@@ -91,1567 +84,1675 @@ body {
 </div>
 
     <div class="card"
-        data-liga="Amistosos" s
-        data-categoria="Pretemporada 2026" 
+        data-liga="Amistosos"
+        data-categoria="Pretemporada 2026"
         data-jornada="Pretemporada"
         data-local="Sultanes"
         data-visitante="Rhinos">
+
         <div class="liga">Amistosos - Pretemporada 2026</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Sultanes.png" width="30">
-                <span style="font-size:14px;">Sultanes</span>
+                <span>Sultanes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 49 - 26
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Rhinos</span>
+                <span>Rhinos</span>
                 <img src="logos/Rhinos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Pretemporada</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina"
         data-jornada="Fecha 1"
         data-local="Athalantas"
         data-visitante="Duendes">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Athalantas.png" width="30">
-                <span style="font-size:14px;">Athalantas</span>
+                <span>Athalantas</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 20 - 15
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Duendes</span>
+                <span>Duendes</span>
                 <img src="logos/Duendes.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina"
         data-jornada="Fecha 1"
         data-local="Panteras"
         data-visitante="Anaconas">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Panteras.png" width="30">
-                <span style="font-size:14px;">Panteras</span>
+                <span>Panteras</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 43 - 7
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Anaconas</span>
+                <span>Anaconas</span>
                 <img src="logos/Anaconas.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina"
         data-jornada="Fecha 1"
         data-local="Juncos RC"
         data-visitante="Copacabana RC">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Juncos RC.png" width="30">
-                <span style="font-size:14px;">Juncos RC</span>
+                <span>Juncos RC</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 17 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Copacabana RC</span>
+                <span>Copacabana RC</span>
                 <img src="logos/Copacabana RC.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 2"
         data-local="Minotauros"
         data-visitante="Circulo de Tenis Montevideo">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 14 - 7
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Circulo de Tenis Montevideo</span>
+                <span>Circulo de Tenis Montevideo</span>
                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 2</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 2"
         data-local="Taborin"
         data-visitante="Minotauros">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Taborin.png" width="30">
-                <span style="font-size:14px;">Taborin</span>
+                <span>Taborin</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 17 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 2</div>
         <div class="fecha">29 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 1"
         data-local="Circulo de Tenis Montevideo"
         data-visitante="UMAG">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
-                <span style="font-size:14px;">Circulo de Tenis Montevideo</span>
+                <span>Circulo de Tenis Montevideo</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 42 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">UMAG</span>
+                <span>UMAG</span>
                 <img src="logos/UMAG.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 1</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 1"
         data-local="Minotauros"
         data-visitante="Combinado">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 28 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Combinado</span>
+                <span>Combinado</span>
                 <img src="logos/Combinado.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 1</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 1"
         data-local="Minotauros"
         data-visitante="UMAG">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 32 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">UMAG</span>
+                <span>UMAG</span>
                 <img src="logos/UMAG.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 1</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 1"
         data-local="Taborin"
         data-visitante="Combinado">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Taborin.png" width="30">
-                <span style="font-size:14px;">Taborin</span>
+                <span>Taborin</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 28 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Combinado</span>
+                <span>Combinado</span>
                 <img src="logos/Combinado.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 1</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Sudamericano de Clubes" s
-        data-categoria="Modalidad XII" 
+        data-liga="Sudamericano de Clubes"
+        data-categoria="Modalidad XII"
         data-jornada="Dia 1"
         data-local="Circulo de Tenis Montevideo"
         data-visitante="Taborin">
+
         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
-                <span style="font-size:14px;">Circulo de Tenis Montevideo</span>
+                <span>Circulo de Tenis Montevideo</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 14 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Taborin</span>
+                <span>Taborin</span>
                 <img src="logos/Taborin.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Dia 1</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Masculino"
         data-jornada="Fecha 2"
         data-local="Espartanos"
         data-visitante="Panteras">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Espartanos.png" width="30">
-                <span style="font-size:14px;">Espartanos</span>
+                <span>Espartanos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 78 - 14
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Panteras</span>
+                <span>Panteras</span>
                 <img src="logos/Panteras.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Masculino"
         data-jornada="Fecha 2"
         data-local="Duendes"
         data-visitante="Gatos">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Duendes.png" width="30">
-                <span style="font-size:14px;">Duendes</span>
+                <span>Duendes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 33 - 38
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Gatos</span>
+                <span>Gatos</span>
                 <img src="logos/Gatos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Masculino"
         data-jornada="Fecha 2"
         data-local="Fénix RC"
         data-visitante="Anaconas">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Fénix RC.png" width="30">
-                <span style="font-size:14px;">Fénix RC</span>
+                <span>Fénix RC</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 41 - 15
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Anaconas</span>
+                <span>Anaconas</span>
                 <img src="logos/Anaconas.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">28 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Porra Caimanera"
         data-visitante="U de Antioquia">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Porra Caimanera.png" width="30">
-                <span style="font-size:14px;">Porra Caimanera</span>
+                <span>Porra Caimanera</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 12 - 10
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">U de Antioquia</span>
+                <span>U de Antioquia</span>
                 <img src="logos/U de Antioquia.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Renos RC"
         data-visitante="Cabras">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Renos RC.png" width="30">
-                <span style="font-size:14px;">Renos RC</span>
+                <span>Renos RC</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 28 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Cabras</span>
+                <span>Cabras</span>
                 <img src="logos/Cabras.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Gatos"
         data-visitante="Armadillos">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Gatos.png" width="30">
-                <span style="font-size:14px;">Gatos</span>
+                <span>Gatos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 35 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Armadillos</span>
+                <span>Armadillos</span>
                 <img src="logos/Armadillos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Espartanos"
         data-visitante="La Estrella Rugby">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Espartanos.png" width="30">
-                <span style="font-size:14px;">Espartanos</span>
+                <span>Espartanos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 17 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">La Estrella Rugby</span>
+                <span>La Estrella Rugby</span>
                 <img src="logos/La Estrella Rugby.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Cabras"
         data-visitante="U de Antioquia">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Cabras.png" width="30">
-                <span style="font-size:14px;">Cabras</span>
+                <span>Cabras</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 0 - 28
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">U de Antioquia</span>
+                <span>U de Antioquia</span>
                 <img src="logos/U de Antioquia.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Renos RC"
         data-visitante="Porra Caimanera">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Renos RC.png" width="30">
-                <span style="font-size:14px;">Renos RC</span>
+                <span>Renos RC</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 12 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Porra Caimanera</span>
+                <span>Porra Caimanera</span>
                 <img src="logos/Porra Caimanera.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="La Estrella Rugby"
         data-visitante="Armadillos">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/La Estrella Rugby.png" width="30">
-                <span style="font-size:14px;">La Estrella Rugby</span>
+                <span>La Estrella Rugby</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 30 - 0
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Armadillos</span>
+                <span>Armadillos</span>
                 <img src="logos/Armadillos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Femenina - Sevens" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Femenina - Sevens"
         data-jornada="Parada 1"
         data-local="Espartanos"
         data-visitante="Gatos">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Femenina - Sevens</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Espartanos.png" width="30">
-                <span style="font-size:14px;">Espartanos</span>
+                <span>Espartanos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 12 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Gatos</span>
+                <span>Gatos</span>
                 <img src="logos/Gatos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Parada 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie C Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie C Masculino"
         data-jornada="Fecha 1"
         data-local="U de Antioquia"
         data-visitante="Gladiadores RC">
+
         <div class="liga">Liga Antioquena de Rugby - Serie C Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/U de Antioquia.png" width="30">
-                <span style="font-size:14px;">U de Antioquia</span>
+                <span>U de Antioquia</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 0 - 70
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Gladiadores RC</span>
+                <span>Gladiadores RC</span>
                 <img src="logos/Gladiadores RC.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie C Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie C Masculino"
         data-jornada="Fecha 1"
         data-local="Cabras"
         data-visitante="Universitarios RC">
+
         <div class="liga">Liga Antioquena de Rugby - Serie C Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Cabras.png" width="30">
-                <span style="font-size:14px;">Cabras</span>
+                <span>Cabras</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 12 - 24
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Universitarios RC</span>
+                <span>Universitarios RC</span>
                 <img src="logos/Universitarios RC.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie C Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie C Masculino"
         data-jornada="Fecha 1"
         data-local="Armadillos"
         data-visitante="Club Deportivo ITM">
+
         <div class="liga">Liga Antioquena de Rugby - Serie C Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Armadillos.png" width="30">
-                <span style="font-size:14px;">Armadillos</span>
+                <span>Armadillos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 27 - 41
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Club Deportivo ITM</span>
+                <span>Club Deportivo ITM</span>
                 <img src="logos/Club Deportivo ITM.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">22 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie C Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie C Masculino"
         data-jornada="Fecha 1"
         data-local="Anaconas"
         data-visitante="Panteras">
+
         <div class="liga">Liga Antioquena de Rugby - Serie C Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Anaconas.png" width="30">
-                <span style="font-size:14px;">Anaconas</span>
+                <span>Anaconas</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 65 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Panteras</span>
+                <span>Panteras</span>
                 <img src="logos/Panteras.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Masculino"
         data-jornada="Fecha 1"
         data-local="Duendes"
         data-visitante="Fénix RC">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Duendes.png" width="30">
-                <span style="font-size:14px;">Duendes</span>
+                <span>Duendes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 15 - 34
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Fénix RC</span>
+                <span>Fénix RC</span>
                 <img src="logos/Fénix RC.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 3"
         data-local="Barbarians"
         data-visitante="Cachacas">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Barbarians.png" width="30">
-                <span style="font-size:14px;">Barbarians</span>
+                <span>Barbarians</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 39 - 31
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Cachacas</span>
+                <span>Cachacas</span>
                 <img src="logos/Cachacas.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 3"
         data-local="Coyotes"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Coyotes.png" width="30">
-                <span style="font-size:14px;">Coyotes</span>
+                <span>Coyotes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 5 - 57
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 3"
         data-local="Carneros"
         data-visitante="Alianza">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Carneros.png" width="30">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 27 - 10
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Alianza</span>
+                <span>Alianza</span>
                 <img src="logos/Alianza.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 3"
         data-local="Jaguares"
         data-visitante="Zeppelin">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Jaguares.png" width="30">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 6 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Zeppelin</span>
+                <span>Zeppelin</span>
                 <img src="logos/Zeppelin.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 3"
         data-local="Salamandras"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Salamandras.png" width="30">
-                <span style="font-size:14px;">Salamandras</span>
+                <span>Salamandras</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 10 - 36
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 3"
         data-local="Carneros"
         data-visitante="Manoba">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Carneros.png" width="30">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 52 - 10
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Manoba</span>
+                <span>Manoba</span>
                 <img src="logos/Manoba.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 3"
         data-local="Jaguares"
         data-visitante="Barbarians">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Jaguares.png" width="30">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 61 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Barbarians</span>
+                <span>Barbarians</span>
                 <img src="logos/Barbarians.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 3"
         data-local="Coyotes"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Coyotes.png" width="30">
-                <span style="font-size:14px;">Coyotes</span>
+                <span>Coyotes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 37 - 36
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 3"
         data-local="Carneros"
         data-visitante="Alianza">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Carneros.png" width="30">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 37 - 36
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Alianza</span>
+                <span>Alianza</span>
                 <img src="logos/Alianza.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 3</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga Antioquena de Rugby" s
-        data-categoria="Serie A Masculino" 
+        data-liga="Liga Antioquena de Rugby"
+        data-categoria="Serie A Masculino"
         data-jornada="Fecha 1"
         data-local="Gatos"
         data-visitante="Espartanos">
+
         <div class="liga">Liga Antioquena de Rugby - Serie A Masculino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Gatos.png" width="30">
-                <span style="font-size:14px;">Gatos</span>
+                <span>Gatos</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 14 - 34
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Espartanos</span>
+                <span>Espartanos</span>
                 <img src="logos/Espartanos.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">21 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 2"
         data-local="Minotauros"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 36 - 41
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 2"
         data-local="Manoba"
         data-visitante="Jaguares">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Manoba.png" width="30">
-                <span style="font-size:14px;">Manoba</span>
+                <span>Manoba</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 24 - 40
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
                 <img src="logos/Jaguares.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 2"
         data-local="Alianza"
         data-visitante="Jaguares">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Alianza.png" width="30">
-                <span style="font-size:14px;">Alianza</span>
+                <span>Alianza</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 7 - 57
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
                 <img src="logos/Jaguares.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 2"
         data-local="Barbarians"
         data-visitante="Coyotes">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Barbarians.png" width="30">
-                <span style="font-size:14px;">Barbarians</span>
+                <span>Barbarians</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 22 - 36
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Coyotes</span>
+                <span>Coyotes</span>
                 <img src="logos/Coyotes.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 2"
         data-local="Minotauros"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 39 - 6
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 2"
         data-local="Minotauros"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Minotauros.png" width="30">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 24 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 2"
         data-local="Zeppelin"
         data-visitante="Salamandras">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Zeppelin.png" width="30">
-                <span style="font-size:14px;">Zeppelin</span>
+                <span>Zeppelin</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 27 - 22
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Salamandras</span>
+                <span>Salamandras</span>
                 <img src="logos/Salamandras.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 2"
         data-local="Alianza"
         data-visitante="Jaguares">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Alianza.png" width="30">
-                <span style="font-size:14px;">Alianza</span>
+                <span>Alianza</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 5 - 17
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
                 <img src="logos/Jaguares.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 2</div>
         <div class="fecha">07 Mar 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 1"
         data-local="Zeppelin"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Zeppelin.png" width="30">
-                <span style="font-size:14px;">Zeppelin</span>
+                <span>Zeppelin</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 47 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 1"
         data-local="Barbarians"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Barbarians.png" width="30">
-                <span style="font-size:14px;">Barbarians</span>
+                <span>Barbarians</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 19 - 26
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 1"
         data-local="Salamandras"
         data-visitante="Manoba">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Salamandras.png" width="30">
-                <span style="font-size:14px;">Salamandras</span>
+                <span>Salamandras</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 23 - 21
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Manoba</span>
+                <span>Manoba</span>
                 <img src="logos/Manoba.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Desarrollo" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Desarrollo"
         data-jornada="Fecha 1"
         data-local="Jaguares"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Desarrollo</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Jaguares.png" width="30">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 24 - 33
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 1"
         data-local="Jaguares"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Jaguares.png" width="30">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 51 - 6
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 1"
         data-local="Coyotes"
         data-visitante="Cachacas">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Coyotes.png" width="30">
-                <span style="font-size:14px;">Coyotes</span>
+                <span>Coyotes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 15 - 5
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Cachacas</span>
+                <span>Cachacas</span>
                 <img src="logos/Cachacas.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 1"
         data-local="Jaguares"
         data-visitante="Carneros">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Jaguares.png" width="30">
-                <span style="font-size:14px;">Jaguares</span>
+                <span>Jaguares</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 25 - 10
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Carneros</span>
+                <span>Carneros</span>
                 <img src="logos/Carneros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Femenino" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Femenino"
         data-jornada="Fecha 1"
         data-local="Barbarians"
         data-visitante="Minotauros">
+
         <div class="liga">Liga de Rugby de Bogota - Femenino</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Barbarians.png" width="30">
-                <span style="font-size:14px;">Barbarians</span>
+                <span>Barbarians</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 0 - 38
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Minotauros</span>
+                <span>Minotauros</span>
                 <img src="logos/Minotauros.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
     
     <div class="card"
-        data-liga="Liga de Rugby de Bogota" s
-        data-categoria="Premier" 
+        data-liga="Liga de Rugby de Bogota"
+        data-categoria="Premier"
         data-jornada="Fecha 1"
         data-local="Coyotes"
         data-visitante="Alianza">
+
         <div class="liga">Liga de Rugby de Bogota - Premier</div>
-        <div class="partido" style="display:flex; align-items:center; gap:5px;">
+
+        <div style="display:flex; align-items:center; gap:5px;">
 
             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                 <img src="logos/Coyotes.png" width="30">
-                <span style="font-size:14px;">Coyotes</span>
+                <span>Coyotes</span>
             </div>
-        
+
             <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
                 49 - 48
             </div>
 
             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                <span style="font-size:14px;">Alianza</span>
+                <span>Alianza</span>
                 <img src="logos/Alianza.png" width="30">
             </div>
 
         </div>
-        
+
         <div class="extra">Jornada: Fecha 1</div>
         <div class="fecha">28 Feb 2026</div>
     </div>
@@ -1666,7 +1767,7 @@ const filtroCategoria = document.getElementById("filtroCategoria");
 const filtroJornada = document.getElementById("filtroJornada");
 const filtroEquipo = document.getElementById("filtroEquipo");
 
-// Obtener valores únicos con filtro previo
+// Obtener valores únicos
 function getFilteredValues(attr, liga, categoria, jornada) {
     const values = new Set();
 
@@ -1682,17 +1783,15 @@ function getFilteredValues(attr, liga, categoria, jornada) {
             } else {
                 values.add(card.dataset[attr]);
             }
-            
         }
     });
 
-    return Array.from(values);
+    return Array.from(values).sort();
 }
 
-// Llenar select
+// Llenar selects
 function fillSelect(select, values, placeholder) {
     select.innerHTML = `<option value="">${placeholder}</option>`;
-
     values.forEach(val => {
         const option = document.createElement("option");
         option.value = val;
@@ -1722,76 +1821,53 @@ function filterCards() {
             card.dataset.local === equipo || 
             card.dataset.visitante === equipo;
 
-        card.style.display = (matchLiga && matchCategoria && matchJornada && matchEquipo) 
-            ? "block" 
+        card.style.display = (matchLiga && matchCategoria && matchJornada && matchEquipo)
+            ? "block"
             : "none";
     });
 }
 
-// Evento LIGA
+// Eventos
 filtroLiga.addEventListener("change", () => {
     const liga = filtroLiga.value;
 
     filtroCategoria.value = "";
     filtroJornada.value = "";
+    filtroEquipo.value = "";
 
-    fillSelect(
-        filtroCategoria,
-        getFilteredValues("categoria", liga),
-        "Todas las categorías"
-    );
-
-    fillSelect(
-        filtroJornada,
-        getFilteredValues("jornada", liga),
-        "Todas las jornadas"
-    );
-    
-    fillSelect(
-        filtroEquipo,
-        getFilteredValues("equipo", liga),
-        "Todos los equipos"
-    );
+    fillSelect(filtroCategoria, getFilteredValues("categoria", liga), "Todas las categorías");
+    fillSelect(filtroJornada, getFilteredValues("jornada", liga), "Todas las jornadas");
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga), "Todos los equipos");
 
     filterCards();
 });
 
-// Evento CATEGORIA
 filtroCategoria.addEventListener("change", () => {
     const liga = filtroLiga.value;
     const categoria = filtroCategoria.value;
 
     filtroJornada.value = "";
+    filtroEquipo.value = "";
 
-    fillSelect(
-        filtroJornada,
-        getFilteredValues("jornada", liga, categoria),
-        "Todas las jornadas"
-    );
-    
-    fillSelect(
-        filtroEquipo,
-        getFilteredValues("equipo", liga, categoria),
-        "Todos los equipos"
-    );
+    fillSelect(filtroJornada, getFilteredValues("jornada", liga, categoria), "Todas las jornadas");
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga, categoria), "Todos los equipos");
 
     filterCards();
 });
 
-// Evento JORNADA
-filtroJornada.addEventListener("change", filterCards);
+filtroJornada.addEventListener("change", () => {
+    const liga = filtroLiga.value;
+    const categoria = filtroCategoria.value;
+    const jornada = filtroJornada.value;
 
-      fillSelect(
-        filtroEquipo,
-        getFilteredValues("equipo", liga, categoria, jornada),
-        "Todos los equipos"
-      );
-);
+    filtroEquipo.value = "";
 
-// Evento EQUIPO
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga, categoria, jornada), "Todos los equipos");
+
+    filterCards();
+});
+
 filtroEquipo.addEventListener("change", filterCards);
-
-);
 
 </script>
 
