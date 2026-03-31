@@ -83,7 +83,9 @@ select {
 
 </div>
 
-    <h2 style="margin-top:30px;">🏉 Amistosos</h2>
+    <h2 class="liga-titulo" data-liga="Amistosos" style="margin-top:30px;">
+        🏉 Amistosos
+    </h2>
     
         <div class="card"
             data-liga="Amistosos"
@@ -116,7 +118,9 @@ select {
             <div class="fecha">29 Mar 2026</div>
         </div>
         
-    <h2 style="margin-top:30px;">🏉 Liga Antioquena de Rugby</h2>
+    <h2 class="liga-titulo" data-liga="Liga Antioquena de Rugby" style="margin-top:30px;">
+        🏉 Liga Antioquena de Rugby
+    </h2>
     
         <div class="card"
             data-liga="Liga Antioquena de Rugby"
@@ -738,7 +742,9 @@ select {
             <div class="fecha">21 Mar 2026</div>
         </div>
         
-    <h2 style="margin-top:30px;">🏉 Liga de Rugby de Bogota</h2>
+    <h2 class="liga-titulo" data-liga="Liga de Rugby de Bogota" style="margin-top:30px;">
+        🏉 Liga de Rugby de Bogota
+    </h2>
     
         <div class="card"
             data-liga="Liga de Rugby de Bogota"
@@ -1546,7 +1552,9 @@ select {
             <div class="fecha">28 Feb 2026</div>
         </div>
         
-    <h2 style="margin-top:30px;">🏉 Sudamericano de Clubes</h2>
+    <h2 class="liga-titulo" data-liga="Sudamericano de Clubes" style="margin-top:30px;">
+        🏉 Sudamericano de Clubes
+    </h2>
     
         <div class="card"
             data-liga="Sudamericano de Clubes"
@@ -1775,6 +1783,7 @@ const filtroCategoria = document.getElementById("filtroCategoria");
 const filtroJornada = document.getElementById("filtroJornada");
 const filtroEquipo = document.getElementById("filtroEquipo");
 
+// Obtener valores
 function getFilteredValues(attr, liga, categoria, jornada) {
     const values = new Set();
 
@@ -1796,6 +1805,7 @@ function getFilteredValues(attr, liga, categoria, jornada) {
     return Array.from(values).sort();
 }
 
+// Llenar selects
 function fillSelect(select, values, placeholder) {
     select.innerHTML = `<option value="">${placeholder}</option>`;
     values.forEach(val => {
@@ -1812,11 +1822,14 @@ fillSelect(filtroCategoria, getFilteredValues("categoria"), "Todas las categorí
 fillSelect(filtroJornada, getFilteredValues("jornada"), "Todas las jornadas");
 fillSelect(filtroEquipo, getFilteredValues("equipo"), "Todos los equipos");
 
+// Filtrar
 function filterCards() {
     const liga = filtroLiga.value;
     const categoria = filtroCategoria.value;
     const jornada = filtroJornada.value;
     const equipo = filtroEquipo.value;
+
+    const ligasVisibles = new Set();
 
     cards.forEach(card => {
         const matchLiga = !liga || card.dataset.liga === liga;
@@ -1826,7 +1839,18 @@ function filterCards() {
             card.dataset.local === equipo || 
             card.dataset.visitante === equipo;
 
-        card.style.display = (matchLiga && matchCategoria && matchJornada && matchEquipo)
+        const visible = matchLiga && matchCategoria && matchJornada && matchEquipo;
+
+        card.style.display = visible ? "block" : "none";
+
+        if (visible) {
+            ligasVisibles.add(card.dataset.liga);
+        }
+    });
+
+    document.querySelectorAll(".liga-titulo").forEach(titulo => {
+        const ligaTitulo = titulo.dataset.liga;
+        titulo.style.display = ligasVisibles.has(ligaTitulo)
             ? "block"
             : "none";
     });
