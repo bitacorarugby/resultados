@@ -7,8 +7,9 @@
 <title>Resultados Rugby</title>
 
 <style>
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     background-color: #f4f6f8;
     padding: 20px;
 }
@@ -18,56 +19,113 @@ body {
     margin: auto;
 }
 
-.card {
-    background: white;
-    border-radius: 12px;
-    padding: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+h1 {
+    margin-bottom: 25px;
 }
 
-.liga {
-    font-size: 13px;
-    color: #888;
+.liga-titulo {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .jornada {
-    margin-top: 15px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c3e50;
 }
 
 .categoria {
-    margin-left: 10px;
-    font-weight: bold;
-    margin-top: 10px;
+    margin-left: 5px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #34495e;
 }
 
 .subjornada {
-    margin-left: 20px;
+    margin-left: 15px;
+    margin-top: 8px;
+    margin-bottom: 5px;
     font-size: 13px;
-    color: #555;
+    color: #7f8c8d;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.1s ease;
+}
+
+.card:hover {
+    transform: scale(1.01);
+}
+
+.liga {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 8px;
+}
+
+.partido-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.equipo {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.score {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    min-width: 70px;
+    color: #2c3e50;
 }
 
 .extra {
     font-size: 12px;
-    color: #666;
-    margin-top: 5px;
+    color: #777;
+    margin-top: 6px;
 }
 
 select {
-    padding: 8px;
+    padding: 8px 10px;
     border-radius: 8px;
     border: 1px solid #ccc;
+    background: white;
 }
 
 @media (max-width: 600px) {
-    .card { padding: 10px; }
-    .liga { font-size: 11px; }
-    .extra { font-size: 10px; }
-    img { width: 24px !important; }
+
+    .card {
+        padding: 14px;
+    }
+
+    .equipo {
+        font-size: 13px;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+
+    img {
+        width: 24px !important;
+    }
+
 }
+
 </style>
 </head>
 
@@ -89,7 +147,7 @@ select {
 
 </div>
 
-    <h2 class="liga-titulo" data-liga="Amistosos" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+    <h2 class="liga-titulo" data-liga="Amistosos" style="display:flex; align-items:center; gap:10px;">
         🏉 Amistosos
     </h2>
     
@@ -115,19 +173,19 @@ select {
 
                         <div class="liga">Amistosos - Pretemporada 2026</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Sultanes.png" width="30">
-                                <span>Sultanes</span>
+                                <span class="equipo">Sultanes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 49 - 26
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Rhinos</span>
+                                <span class="equipo">Rhinos</span>
                                 <img src="logos/Rhinos.png" width="30">
                             </div>
 
@@ -138,7 +196,7 @@ select {
 
                     </div>
                     
-    <h2 class="liga-titulo" data-liga="Liga Antioqueña de Rugby" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+    <h2 class="liga-titulo" data-liga="Liga Antioqueña de Rugby" style="display:flex; align-items:center; gap:10px;">
         <img src="logos/liga_antioquia.png" width="24"> Liga Antioqueña de Rugby
     </h2>
     
@@ -164,19 +222,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Athalantas.png" width="30">
-                                <span>Athalantas</span>
+                                <span class="equipo">Athalantas</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 20 - 15
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Duendes</span>
+                                <span class="equipo">Duendes</span>
                                 <img src="logos/Duendes.png" width="30">
                             </div>
 
@@ -197,19 +255,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Panteras.png" width="30">
-                                <span>Panteras</span>
+                                <span class="equipo">Panteras</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 43 - 7
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Anaconas</span>
+                                <span class="equipo">Anaconas</span>
                                 <img src="logos/Anaconas.png" width="30">
                             </div>
 
@@ -230,19 +288,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Juncos RC.png" width="30">
-                                <span>Juncos RC</span>
+                                <span class="equipo">Juncos RC</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 17 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Copacabana RC</span>
+                                <span class="equipo">Copacabana RC</span>
                                 <img src="logos/Copacabana RC.png" width="30">
                             </div>
 
@@ -275,19 +333,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Espartanos.png" width="30">
-                                <span>Espartanos</span>
+                                <span class="equipo">Espartanos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 78 - 14
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Panteras</span>
+                                <span class="equipo">Panteras</span>
                                 <img src="logos/Panteras.png" width="30">
                             </div>
 
@@ -308,19 +366,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Duendes.png" width="30">
-                                <span>Duendes</span>
+                                <span class="equipo">Duendes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 33 - 38
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Gatos</span>
+                                <span class="equipo">Gatos</span>
                                 <img src="logos/Gatos.png" width="30">
                             </div>
 
@@ -341,19 +399,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Fénix RC.png" width="30">
-                                <span>Fénix RC</span>
+                                <span class="equipo">Fénix RC</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 41 - 15
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Anaconas</span>
+                                <span class="equipo">Anaconas</span>
                                 <img src="logos/Anaconas.png" width="30">
                             </div>
 
@@ -386,19 +444,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Porra Caimanera.png" width="30">
-                                <span>Porra Caimanera</span>
+                                <span class="equipo">Porra Caimanera</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 12 - 10
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>U de Antioquia</span>
+                                <span class="equipo">U de Antioquia</span>
                                 <img src="logos/U de Antioquia.png" width="30">
                             </div>
 
@@ -419,19 +477,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Renos RC.png" width="30">
-                                <span>Renos RC</span>
+                                <span class="equipo">Renos RC</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 28 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Cabras</span>
+                                <span class="equipo">Cabras</span>
                                 <img src="logos/Cabras.png" width="30">
                             </div>
 
@@ -452,19 +510,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Gatos.png" width="30">
-                                <span>Gatos</span>
+                                <span class="equipo">Gatos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 35 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Armadillos</span>
+                                <span class="equipo">Armadillos</span>
                                 <img src="logos/Armadillos.png" width="30">
                             </div>
 
@@ -485,19 +543,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Espartanos.png" width="30">
-                                <span>Espartanos</span>
+                                <span class="equipo">Espartanos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 17 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>La Estrella Rugby</span>
+                                <span class="equipo">La Estrella Rugby</span>
                                 <img src="logos/La Estrella Rugby.png" width="30">
                             </div>
 
@@ -518,19 +576,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Cabras.png" width="30">
-                                <span>Cabras</span>
+                                <span class="equipo">Cabras</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 0 - 28
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>U de Antioquia</span>
+                                <span class="equipo">U de Antioquia</span>
                                 <img src="logos/U de Antioquia.png" width="30">
                             </div>
 
@@ -551,19 +609,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Renos RC.png" width="30">
-                                <span>Renos RC</span>
+                                <span class="equipo">Renos RC</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 12 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Porra Caimanera</span>
+                                <span class="equipo">Porra Caimanera</span>
                                 <img src="logos/Porra Caimanera.png" width="30">
                             </div>
 
@@ -584,19 +642,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/La Estrella Rugby.png" width="30">
-                                <span>La Estrella Rugby</span>
+                                <span class="equipo">La Estrella Rugby</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 30 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Armadillos</span>
+                                <span class="equipo">Armadillos</span>
                                 <img src="logos/Armadillos.png" width="30">
                             </div>
 
@@ -617,19 +675,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Femenina - Sevens</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Espartanos.png" width="30">
-                                <span>Espartanos</span>
+                                <span class="equipo">Espartanos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 12 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Gatos</span>
+                                <span class="equipo">Gatos</span>
                                 <img src="logos/Gatos.png" width="30">
                             </div>
 
@@ -658,19 +716,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie C Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/U de Antioquia.png" width="30">
-                                <span>U de Antioquia</span>
+                                <span class="equipo">U de Antioquia</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 0 - 70
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Gladiadores RC</span>
+                                <span class="equipo">Gladiadores RC</span>
                                 <img src="logos/Gladiadores RC.png" width="30">
                             </div>
 
@@ -691,19 +749,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie C Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Cabras.png" width="30">
-                                <span>Cabras</span>
+                                <span class="equipo">Cabras</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 12 - 24
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Universitarios RC</span>
+                                <span class="equipo">Universitarios RC</span>
                                 <img src="logos/Universitarios RC.png" width="30">
                             </div>
 
@@ -724,19 +782,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie C Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Armadillos.png" width="30">
-                                <span>Armadillos</span>
+                                <span class="equipo">Armadillos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 27 - 41
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Club Deportivo ITM</span>
+                                <span class="equipo">Club Deportivo ITM</span>
                                 <img src="logos/Club Deportivo ITM.png" width="30">
                             </div>
 
@@ -769,19 +827,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie C Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Anaconas.png" width="30">
-                                <span>Anaconas</span>
+                                <span class="equipo">Anaconas</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 65 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Panteras</span>
+                                <span class="equipo">Panteras</span>
                                 <img src="logos/Panteras.png" width="30">
                             </div>
 
@@ -810,19 +868,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Duendes.png" width="30">
-                                <span>Duendes</span>
+                                <span class="equipo">Duendes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 15 - 34
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Fénix RC</span>
+                                <span class="equipo">Fénix RC</span>
                                 <img src="logos/Fénix RC.png" width="30">
                             </div>
 
@@ -843,19 +901,19 @@ select {
 
                         <div class="liga">Liga Antioqueña de Rugby - Serie A Masculino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Gatos.png" width="30">
-                                <span>Gatos</span>
+                                <span class="equipo">Gatos</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 14 - 34
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Espartanos</span>
+                                <span class="equipo">Espartanos</span>
                                 <img src="logos/Espartanos.png" width="30">
                             </div>
 
@@ -866,7 +924,7 @@ select {
 
                     </div>
                     
-    <h2 class="liga-titulo" data-liga="Liga de Rugby de Bogotá" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+    <h2 class="liga-titulo" data-liga="Liga de Rugby de Bogotá" style="display:flex; align-items:center; gap:10px;">
         <img src="logos/liga_bogota.png" width="24"> Liga de Rugby de Bogotá
     </h2>
     
@@ -892,19 +950,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Barbarians.png" width="30">
-                                <span>Barbarians</span>
+                                <span class="equipo">Barbarians</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 39 - 31
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Cachacas</span>
+                                <span class="equipo">Cachacas</span>
                                 <img src="logos/Cachacas.png" width="30">
                             </div>
 
@@ -925,19 +983,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Coyotes.png" width="30">
-                                <span>Coyotes</span>
+                                <span class="equipo">Coyotes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 5 - 57
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -958,19 +1016,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Carneros.png" width="30">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 27 - 10
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Alianza</span>
+                                <span class="equipo">Alianza</span>
                                 <img src="logos/Alianza.png" width="30">
                             </div>
 
@@ -999,19 +1057,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Jaguares.png" width="30">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 6 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Zeppelin</span>
+                                <span class="equipo">Zeppelin</span>
                                 <img src="logos/Zeppelin.png" width="30">
                             </div>
 
@@ -1032,19 +1090,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Salamandras.png" width="30">
-                                <span>Salamandras</span>
+                                <span class="equipo">Salamandras</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 10 - 36
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1065,19 +1123,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Carneros.png" width="30">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 52 - 10
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Manoba</span>
+                                <span class="equipo">Manoba</span>
                                 <img src="logos/Manoba.png" width="30">
                             </div>
 
@@ -1106,19 +1164,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Jaguares.png" width="30">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 61 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Barbarians</span>
+                                <span class="equipo">Barbarians</span>
                                 <img src="logos/Barbarians.png" width="30">
                             </div>
 
@@ -1139,19 +1197,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Coyotes.png" width="30">
-                                <span>Coyotes</span>
+                                <span class="equipo">Coyotes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 37 - 36
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1172,19 +1230,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Carneros.png" width="30">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 37 - 36
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Alianza</span>
+                                <span class="equipo">Alianza</span>
                                 <img src="logos/Alianza.png" width="30">
                             </div>
 
@@ -1217,19 +1275,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 36 - 41
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1250,19 +1308,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Manoba.png" width="30">
-                                <span>Manoba</span>
+                                <span class="equipo">Manoba</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 24 - 40
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                                 <img src="logos/Jaguares.png" width="30">
                             </div>
 
@@ -1283,19 +1341,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Zeppelin.png" width="30">
-                                <span>Zeppelin</span>
+                                <span class="equipo">Zeppelin</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 27 - 22
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Salamandras</span>
+                                <span class="equipo">Salamandras</span>
                                 <img src="logos/Salamandras.png" width="30">
                             </div>
 
@@ -1324,19 +1382,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Alianza.png" width="30">
-                                <span>Alianza</span>
+                                <span class="equipo">Alianza</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 7 - 57
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                                 <img src="logos/Jaguares.png" width="30">
                             </div>
 
@@ -1357,19 +1415,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Barbarians.png" width="30">
-                                <span>Barbarians</span>
+                                <span class="equipo">Barbarians</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 22 - 36
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Coyotes</span>
+                                <span class="equipo">Coyotes</span>
                                 <img src="logos/Coyotes.png" width="30">
                             </div>
 
@@ -1390,19 +1448,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 39 - 6
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1431,19 +1489,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 24 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1464,19 +1522,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Alianza.png" width="30">
-                                <span>Alianza</span>
+                                <span class="equipo">Alianza</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 5 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                                 <img src="logos/Jaguares.png" width="30">
                             </div>
 
@@ -1509,19 +1567,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Zeppelin.png" width="30">
-                                <span>Zeppelin</span>
+                                <span class="equipo">Zeppelin</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 47 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1542,19 +1600,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Salamandras.png" width="30">
-                                <span>Salamandras</span>
+                                <span class="equipo">Salamandras</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 23 - 21
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Manoba</span>
+                                <span class="equipo">Manoba</span>
                                 <img src="logos/Manoba.png" width="30">
                             </div>
 
@@ -1575,19 +1633,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Desarrollo</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Jaguares.png" width="30">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 24 - 33
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1616,19 +1674,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Barbarians.png" width="30">
-                                <span>Barbarians</span>
+                                <span class="equipo">Barbarians</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 19 - 26
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1649,19 +1707,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Jaguares.png" width="30">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 51 - 6
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1682,19 +1740,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Premier</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Coyotes.png" width="30">
-                                <span>Coyotes</span>
+                                <span class="equipo">Coyotes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 49 - 48
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Alianza</span>
+                                <span class="equipo">Alianza</span>
                                 <img src="logos/Alianza.png" width="30">
                             </div>
 
@@ -1723,19 +1781,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Coyotes.png" width="30">
-                                <span>Coyotes</span>
+                                <span class="equipo">Coyotes</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 15 - 5
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Cachacas</span>
+                                <span class="equipo">Cachacas</span>
                                 <img src="logos/Cachacas.png" width="30">
                             </div>
 
@@ -1756,19 +1814,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Jaguares.png" width="30">
-                                <span>Jaguares</span>
+                                <span class="equipo">Jaguares</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 25 - 10
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Carneros</span>
+                                <span class="equipo">Carneros</span>
                                 <img src="logos/Carneros.png" width="30">
                             </div>
 
@@ -1789,19 +1847,19 @@ select {
 
                         <div class="liga">Liga de Rugby de Bogotá - Femenino</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Barbarians.png" width="30">
-                                <span>Barbarians</span>
+                                <span class="equipo">Barbarians</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 0 - 38
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1812,7 +1870,7 @@ select {
 
                     </div>
                     
-    <h2 class="liga-titulo" data-liga="Sudamericano de Clubes" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+    <h2 class="liga-titulo" data-liga="Sudamericano de Clubes" style="display:flex; align-items:center; gap:10px;">
         <img src="logos/sudamericano.png" width="24"> Sudamericano de Clubes
     </h2>
     
@@ -1838,19 +1896,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 14 - 7
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Circulo de Tenis Montevideo</span>
+                                <span class="equipo">Circulo de Tenis Montevideo</span>
                                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
                             </div>
 
@@ -1871,19 +1929,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Taborin.png" width="30">
-                                <span>Taborin</span>
+                                <span class="equipo">Taborin</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 17 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                                 <img src="logos/Minotauros.png" width="30">
                             </div>
 
@@ -1916,19 +1974,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
-                                <span>Circulo de Tenis Montevideo</span>
+                                <span class="equipo">Circulo de Tenis Montevideo</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 42 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>UMAG</span>
+                                <span class="equipo">UMAG</span>
                                 <img src="logos/UMAG.png" width="30">
                             </div>
 
@@ -1949,19 +2007,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 28 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Combinado</span>
+                                <span class="equipo">Combinado</span>
                                 <img src="logos/Combinado.png" width="30">
                             </div>
 
@@ -1982,19 +2040,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Minotauros.png" width="30">
-                                <span>Minotauros</span>
+                                <span class="equipo">Minotauros</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 32 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>UMAG</span>
+                                <span class="equipo">UMAG</span>
                                 <img src="logos/UMAG.png" width="30">
                             </div>
 
@@ -2015,19 +2073,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Taborin.png" width="30">
-                                <span>Taborin</span>
+                                <span class="equipo">Taborin</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 28 - 0
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Combinado</span>
+                                <span class="equipo">Combinado</span>
                                 <img src="logos/Combinado.png" width="30">
                             </div>
 
@@ -2048,19 +2106,19 @@ select {
 
                         <div class="liga">Sudamericano de Clubes - Modalidad XII</div>
 
-                        <div style="display:flex; align-items:center; gap:5px;">
+                        <div class="partido-row">
 
                             <div style="flex:1; display:flex; align-items:center; gap:6px;">
                                 <img src="logos/Circulo de Tenis Montevideo.png" width="30">
-                                <span>Circulo de Tenis Montevideo</span>
+                                <span class="equipo">Circulo de Tenis Montevideo</span>
                             </div>
 
-                            <div style="flex:0 0 70px; text-align:center; font-size:18px; font-weight:bold;">
+                            <div class="score">
                                 14 - 17
                             </div>
 
                             <div style="flex:1; display:flex; justify-content:flex-end; align-items:center; gap:6px;">
-                                <span>Taborin</span>
+                                <span class="equipo">Taborin</span>
                                 <img src="logos/Taborin.png" width="30">
                             </div>
 
@@ -2112,7 +2170,6 @@ function fillSelect(select, values, placeholder) {
     });
 }
 
-// INIT
 fillSelect(filtroLiga, getFilteredValues("liga"), "Todas las ligas");
 fillSelect(filtroCategoria, getFilteredValues("categoria"), "Todas las categorías");
 fillSelect(filtroJornada, getFilteredValues("jornada"), "Todas las jornadas");
@@ -2138,12 +2195,10 @@ function filterCards() {
         if (visible) ligasVisibles.add(card.dataset.liga);
     });
 
-    // LIGAS
     document.querySelectorAll(".liga-titulo").forEach(t => {
         t.style.display = ligasVisibles.has(t.dataset.liga) ? "block" : "none";
     });
 
-    // 🔥 FECHAS (FIX)
     document.querySelectorAll(".jornada").forEach(j => {
         const visible = Array.from(cards).some(card =>
             card.style.display !== "none" &&
@@ -2153,7 +2208,6 @@ function filterCards() {
         j.style.display = visible ? "block" : "none";
     });
 
-    // CATEGORÍAS
     document.querySelectorAll(".categoria").forEach(c => {
         const visible = Array.from(cards).some(card =>
             card.style.display !== "none" &&
@@ -2163,7 +2217,6 @@ function filterCards() {
         c.style.display = visible ? "block" : "none";
     });
 
-    // JORNADAS
     document.querySelectorAll(".subjornada").forEach(s => {
         const visible = Array.from(cards).some(card =>
             card.style.display !== "none" &&
@@ -2175,7 +2228,6 @@ function filterCards() {
     });
 }
 
-// CASCADEO
 filtroLiga.addEventListener("change", () => {
     const liga = filtroLiga.value;
 
