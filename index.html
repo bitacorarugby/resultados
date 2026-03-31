@@ -61,8 +61,9 @@ select {
 <body>
 
 <div class="container">
+
 <h1 style="display:flex; align-items:center; gap:10px;">
-    <img src="https://flagcdn.com/w40/co.png" width="30">
+    <img src="https://flagcdn.com/w40/co.png" width="28">
     Resultados Rugby Colombia
 </h1>
 
@@ -86,7 +87,7 @@ select {
 
 </div>
 
-    <h2 class="liga-titulo" data-liga="Amistosos" style="margin-top:30px;">
+    <h2 class="liga-titulo" data-liga="Amistosos" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
         🏉 Amistosos
     </h2>
     
@@ -121,8 +122,8 @@ select {
             <div class="fecha">29 Mar 2026</div>
         </div>
         
-    <h2 class="liga-titulo" data-liga="Liga Antioqueña de Rugby" style="margin-top:30px;">
-        🏉 Liga Antioqueña de Rugby
+    <h2 class="liga-titulo" data-liga="Liga Antioqueña de Rugby" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+        <img src="logos/liga_antioquia.png" width="24"> Liga Antioqueña de Rugby
     </h2>
     
         <div class="card"
@@ -745,8 +746,8 @@ select {
             <div class="fecha">21 Mar 2026</div>
         </div>
         
-    <h2 class="liga-titulo" data-liga="Liga de Rugby de Bogotá" style="margin-top:30px;">
-        🏉 Liga de Rugby de Bogotá
+    <h2 class="liga-titulo" data-liga="Liga de Rugby de Bogotá" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+        <img src="logos/liga_bogota.png" width="24"> Liga de Rugby de Bogotá
     </h2>
     
         <div class="card"
@@ -1555,8 +1556,8 @@ select {
             <div class="fecha">28 Feb 2026</div>
         </div>
         
-    <h2 class="liga-titulo" data-liga="Sudamericano de Clubes" style="margin-top:30px;">
-        🏉 Sudamericano de Clubes
+    <h2 class="liga-titulo" data-liga="Sudamericano de Clubes" style="margin-top:30px; display:flex; align-items:center; gap:10px;">
+        <img src="logos/Sudamericano.png" width="24"> Sudamericano de Clubes
     </h2>
     
         <div class="card"
@@ -1786,7 +1787,6 @@ const filtroCategoria = document.getElementById("filtroCategoria");
 const filtroJornada = document.getElementById("filtroJornada");
 const filtroEquipo = document.getElementById("filtroEquipo");
 
-// Obtener valores
 function getFilteredValues(attr, liga, categoria, jornada) {
     const values = new Set();
 
@@ -1808,7 +1808,6 @@ function getFilteredValues(attr, liga, categoria, jornada) {
     return Array.from(values).sort();
 }
 
-// Llenar selects
 function fillSelect(select, values, placeholder) {
     select.innerHTML = `<option value="">${placeholder}</option>`;
     values.forEach(val => {
