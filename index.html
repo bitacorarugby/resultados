@@ -2027,15 +2027,22 @@ const filtroCategoria = document.getElementById("filtroCategoria");
 const filtroJornada = document.getElementById("filtroJornada");
 const filtroEquipo = document.getElementById("filtroEquipo");
 
-function getFilteredValues(attr) {
+// 🔥 NUEVA FUNCIÓN CON CASCADEO
+function getFilteredValues(attr, liga, categoria, jornada) {
     const values = new Set();
 
     cards.forEach(card => {
-        if (attr === "equipo") {
-            values.add(card.dataset.local);
-            values.add(card.dataset.visitante);
-        } else {
-            values.add(card.dataset[attr]);
+        const matchLiga = !liga || card.dataset.liga === liga;
+        const matchCategoria = !categoria || card.dataset.categoria === categoria;
+        const matchJornada = !jornada || card.dataset.jornada === jornada;
+
+        if (matchLiga && matchCategoria && matchJornada) {
+            if (attr === "equipo") {
+                values.add(card.dataset.local);
+                values.add(card.dataset.visitante);
+            } else {
+                values.add(card.dataset[attr]);
+            }
         }
     });
 
@@ -2052,11 +2059,13 @@ function fillSelect(select, values, placeholder) {
     });
 }
 
+// INIT
 fillSelect(filtroLiga, getFilteredValues("liga"), "Todas las ligas");
 fillSelect(filtroCategoria, getFilteredValues("categoria"), "Todas las categorías");
 fillSelect(filtroJornada, getFilteredValues("jornada"), "Todas las jornadas");
 fillSelect(filtroEquipo, getFilteredValues("equipo"), "Todos los equipos");
 
+// FILTRO PRINCIPAL
 function filterCards() {
     const liga = filtroLiga.value;
     const categoria = filtroCategoria.value;
@@ -2074,9 +2083,7 @@ function filterCards() {
 
         card.style.display = visible ? "block" : "none";
 
-        if (visible) {
-            ligasVisibles.add(card.dataset.liga);
-        }
+        if (visible) ligasVisibles.add(card.dataset.liga);
     });
 
     document.querySelectorAll(".liga-titulo").forEach(t => {
@@ -2110,9 +2117,46 @@ function filterCards() {
     });
 }
 
-filtroLiga.addEventListener("change", filterCards);
-filtroCategoria.addEventListener("change", filterCards);
-filtroJornada.addEventListener("change", filterCards);
+// 🔥 EVENTOS CON CASCADEO
+filtroLiga.addEventListener("change", () => {
+    const liga = filtroLiga.value;
+
+    filtroCategoria.value = "";
+    filtroJornada.value = "";
+    filtroEquipo.value = "";
+
+    fillSelect(filtroCategoria, getFilteredValues("categoria", liga), "Todas las categorías");
+    fillSelect(filtroJornada, getFilteredValues("jornada", liga), "Todas las jornadas");
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga), "Todos los equipos");
+
+    filterCards();
+});
+
+filtroCategoria.addEventListener("change", () => {
+    const liga = filtroLiga.value;
+    const categoria = filtroCategoria.value;
+
+    filtroJornada.value = "";
+    filtroEquipo.value = "";
+
+    fillSelect(filtroJornada, getFilteredValues("jornada", liga, categoria), "Todas las jornadas");
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga, categoria), "Todos los equipos");
+
+    filterCards();
+});
+
+filtroJornada.addEventListener("change", () => {
+    const liga = filtroLiga.value;
+    const categoria = filtroCategoria.value;
+    const jornada = filtroJornada.value;
+
+    filtroEquipo.value = "";
+
+    fillSelect(filtroEquipo, getFilteredValues("equipo", liga, categoria, jornada), "Todos los equipos");
+
+    filterCards();
+});
+
 filtroEquipo.addEventListener("change", filterCards);
 
 </script>
