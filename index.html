@@ -17,6 +17,7 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
+    padding-top: 10px;
 }
 
 h1 {
@@ -59,13 +60,14 @@ h1 {
     background: white;
     border-radius: 14px;
     padding: 18px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.08);
     transition: transform 0.1s ease;
 }
 
 .card:hover {
-    transform: scale(1.01);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
 }
 
 .liga {
@@ -106,6 +108,23 @@ select {
     background: white;
 }
 
+/* 🔥 STICKY FILTROS */
+.filtros {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #f4f6f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e6ed;
+    transition: box-shadow 0.2s ease;
+}
+
+/* 🔥 SOMBRA DINÁMICA */
+.filtros.scrolled {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
 @media (max-width: 600px) {
 
     .card {
@@ -138,13 +157,15 @@ select {
     Resultados Rugby Colombia
 </h1>
 
-<div style="margin-bottom:20px; display:flex; flex-wrap:wrap; gap:10px;">
+<div class="filtros">
+<div style="display:flex; flex-wrap:wrap; gap:10px;">
 
 <select id="filtroLiga"><option value="">Todas las ligas</option></select>
 <select id="filtroCategoria"><option value="">Todas las categorías</option></select>
 <select id="filtroJornada"><option value="">Todas las jornadas</option></select>
 <select id="filtroEquipo"><option value="">Todos los equipos</option></select>
 
+</div>
 </div>
 
     <h2 class="liga-titulo" data-liga="Amistosos" style="display:flex; align-items:center; gap:10px;">
@@ -2586,6 +2607,16 @@ select {
 
 <script>
 const cards = document.querySelectorAll(".card");
+const filtros = document.querySelector(".filtros");
+
+// 🔥 SOMBRA DINÁMICA
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+        filtros.classList.add("scrolled");
+    } else {
+        filtros.classList.remove("scrolled");
+    }
+});
 
 const filtroLiga = document.getElementById("filtroLiga");
 const filtroCategoria = document.getElementById("filtroCategoria");
