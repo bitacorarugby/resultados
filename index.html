@@ -20,8 +20,27 @@ body {
     padding-top: 10px;
 }
 
-h1 {
+/* 🔥 HEADER NUEVO */
+.header {
     margin-bottom: 25px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.titulo-principal {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2c3e50;
+    letter-spacing: -0.3px;
+}
+
+.subtitulo {
+    font-size: 13px;
+    color: #7f8c8d;
 }
 
 .liga-titulo {
@@ -150,10 +169,16 @@ select {
 
 <div class="container">
 
-<h1 style="display:flex; align-items:center; gap:10px;">
-    <img src="https://flagcdn.com/w40/co.png" width="28">
-    Resultados Rugby Colombia
-</h1>
+<!-- 🔥 HEADER NUEVO -->
+<div class="header">
+    <div class="header-left">
+        <img src="https://flagcdn.com/w40/co.png" width="32">
+        <div>
+            <div class="titulo-principal">Rugby Colombia</div>
+            <div class="subtitulo">Resultados y competiciones</div>
+        </div>
+    </div>
+</div>
 
 <div class="filtros">
 <div style="display:flex; flex-wrap:wrap; gap:10px;">
