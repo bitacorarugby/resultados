@@ -169,7 +169,6 @@ select {
 
 <div class="container">
 
-<!-- 🔥 HEADER NUEVO -->
 <div class="header">
     <div class="header-left">
         <img src="https://flagcdn.com/w40/co.png" width="32">
@@ -2714,22 +2713,37 @@ function filterCards() {
         j.style.display = visible ? "block" : "none";
     });
 
+    // 🔥 FIX categoria
     document.querySelectorAll(".categoria").forEach(c => {
-        const visible = Array.from(cards).some(card =>
-            card.style.display !== "none" &&
-            card.dataset.liga === c.dataset.liga &&
-            card.dataset.categoria === c.dataset.categoria
-        );
+
+        let next = c.nextElementSibling;
+        let visible = false;
+
+        while (next && !next.classList.contains("categoria") && !next.classList.contains("jornada")) {
+            if (next.classList.contains("card") && next.style.display !== "none") {
+                visible = true;
+                break;
+            }
+            next = next.nextElementSibling;
+        }
+
         c.style.display = visible ? "block" : "none";
     });
 
+    // 🔥 FIX subjornada
     document.querySelectorAll(".subjornada").forEach(s => {
-        const visible = Array.from(cards).some(card =>
-            card.style.display !== "none" &&
-            card.dataset.liga === s.dataset.liga &&
-            card.dataset.categoria === s.dataset.categoria &&
-            card.dataset.jornada === s.dataset.jornada
-        );
+
+        let next = s.nextElementSibling;
+        let visible = false;
+
+        while (next && !next.classList.contains("subjornada") && !next.classList.contains("categoria")) {
+            if (next.classList.contains("card") && next.style.display !== "none") {
+                visible = true;
+                break;
+            }
+            next = next.nextElementSibling;
+        }
+
         s.style.display = visible ? "block" : "none";
     });
 }
