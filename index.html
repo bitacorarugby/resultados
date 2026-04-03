@@ -2675,7 +2675,18 @@ function fillSelect(select, values, placeholder) {
     });
 }
 
-fillSelect(filtroLiga, getFilteredValues("liga"), "Todas las ligas");
+const ordenLigas = [
+    "Liga de Rugby de Bogotá",
+    "Liga Antioqueña de Rugby",
+    "Sudamericano de Clubes",
+    "Amistosos"
+];
+
+const ligasDisponibles = getFilteredValues("liga");
+
+const ligasOrdenadas = ordenLigas.filter(l => ligasDisponibles.includes(l));
+
+fillSelect(filtroLiga, ligasOrdenadas, "Todas las ligas");
 fillSelect(filtroCategoria, getFilteredValues("categoria"), "Todas las categorías");
 fillSelect(filtroJornada, getFilteredValues("jornada"), "Todas las jornadas");
 fillSelect(filtroEquipo, getFilteredValues("equipo"), "Todos los equipos");
