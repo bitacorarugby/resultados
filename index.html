@@ -121,24 +121,37 @@ body {
 }
 
 /* 🔥 ESTADOS */
-.estado-finalizado {
-    color: #27ae60;
+.estado-finalizado,
+.estado-aplazado,
+.estado-cancelado,
+.estado-pendiente {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
     font-weight: 600;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* Colores */
+.estado-finalizado {
+    background-color: #d4efdf;
+    color: #27ae60;
 }
 
 .estado-aplazado {
+    background-color: #fdebd0;
     color: #f39c12;
-    font-weight: 600;
 }
 
 .estado-cancelado {
+    background-color: #f5b7b1;
     color: #e74c3c;
-    font-weight: 600;
 }
 
 .estado-pendiente {
+    background-color: #d6eaf8;
     color: #3498db;
-    font-weight: 600;
 }
 
 select {
@@ -1673,7 +1686,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1707,7 +1720,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1741,7 +1754,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1775,7 +1788,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1809,7 +1822,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1843,7 +1856,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1877,7 +1890,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Parada 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1919,7 +1932,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Fecha 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1953,7 +1966,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Fecha 2</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -1995,7 +2008,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Fecha 3</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -2029,7 +2042,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Fecha 3</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
@@ -2063,7 +2076,7 @@ select {
 
                         <div class="extra">12 Apr 2026</div>
                         <div class="extra">Fecha 3</div>
-                        <div class="extra ">Pendiente</div>
+                        <div class="extra estado-pendiente">Pendiente</div>
 
                     </div>
                     
